@@ -1,0 +1,331 @@
+:root {
+  /* variaveis css*/
+
+/* Cores bases */
+  --color-background:  #F1FAEE;
+  --color-text-base: #457B9D;
+  --color-text-secondary: #F1FAEE;
+  --color-text-title: #1D3557;
+  --color-text-hover: purple;
+  
+/* Background */
+  --color-header-background: #457B9D; 
+  --color-footer-background: #457B9D; 
+  --color-button-background: #1D3557;
+  
+  /* Estilizacao do botao */
+  --color-button-border: #d4c2ff;
+  --color-button-text: #F1FAEE;
+  --color-button-hover: black;
+  --color-button-shadow: #A8DADC;
+  
+  /* Estilizacao box itens  */
+  --color-box-base: #ffffff;
+  --color-box-border: whitesmoke;
+  --color-box-hover: #A8DADC;
+  --color-box-shadow: #A8DADC;
+  
+  /* tamanho da font padrão: 16px - 100% - 1rem */
+  font-size: 60%;
+  /* controle das medidas rem */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#page-landing {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background: var(--color-background);
+  font: 500 1.6rem Poppins;
+  color: var(--color-text-base);
+}
+
+.page-header {
+  background: var(--color-header-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  padding: 0.5rem;
+}
+
+.page-header button {
+  background-color: var(--color-button-background);
+  box-shadow: 0 0 15px var(--color-button-shadow);
+
+  border: solid 2px var(--color-button-border);
+  border-radius: 0.5rem;
+  padding: .6rem;
+
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+  align-self: flex-end;
+  justify-content: center ;
+}
+
+.page-header button img {
+  height: 16px;
+  width: auto;
+}
+
+.page-header button span {
+  display: none;
+}
+
+.page-header .language-button:hover {
+  background-color: var(--color-button-hover);
+  transition: 0.4s;
+  transform: scale(0.8);
+}
+
+.page-header a img {
+  width: 85vw;
+  max-width: 650px;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+ }
+
+.landing-item {
+  background-color: var(--color-box-base);
+  border: 1px solid var(--color-box-border);
+  border-radius: 0.5rem;
+  width: 85vw;
+  max-width: 680px;
+  margin: 2.4rem auto;
+  box-shadow: 0 0 30px var(--color-box-shadow);
+}
+
+.landing-item header {
+  padding: 3.2rem 2rem;
+  text-align: center;
+}
+
+.landing-item header h2 {
+  padding-bottom: 3rem;
+  font-family: "Permanent Marker", cursive;
+  color: var(--color-text-title);
+}
+
+.landing-item header img {
+  width: 70vw;
+  max-width: 550px;
+  height: auto;
+}
+
+.landing-item p {
+  padding: 0 2rem;
+  font: 500 1.6rem Archivo;
+  text-align: center;
+  color: var(--color-text-base);
+  font-size: 2rem;
+  line-height: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.landing-item:hover {
+  transition: all 0.4s;
+  background-color: var(--color-box-hover);
+  transform: scale(0.9);
+}
+
+.landing-item:hover h2, 
+.landing-item:hover p {
+color: var(--color-text-hover);
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio button {
+  background-color: var(--color-button-background);
+  height: 5rem;
+  width: 70vw;
+
+  border: solid 2px var(--color-button-border);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 30px var(--color-button-shadow);
+  
+  padding: 1rem;
+  max-width: 350px;
+  text-decoration: none;
+}
+
+.portfolio-button a {
+  color: var(--color-button-text);
+  font: 500 1.4rem Archivo;
+  text-decoration: none;
+}
+
+.portfolio-button:hover,
+.portfolio-button:hover a {
+  background-color: var(--color-button-hover);
+  color: var(--color-text-hover);
+  transition: 0.4s;
+  transform: scale(0.9);
+  
+}
+
+.dev-footer {
+  background: var(--color-footer-background);
+  margin-top: 3rem;
+  width: 100vw;
+  /* max-width: 500px; */
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+}
+
+.dev-footer p {
+  color: var(--color-text-secondary);
+  font: 500 1.6rem Archivo;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.dev-footer p img {
+  width: auto;
+  height: 3vh;
+}
+
+@media (min-width: 700px) {
+  body {
+    /* marcacao temporaria */
+    background: burlywood;
+  }
+
+  .page-header button {
+    padding: 0.8rem;
+    width: 230px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+  }
+
+  .page-header button img {
+    height: 24px;
+    width: auto;
+  }
+
+  .page-header button span {
+    color: var(--color-button-text);
+    text-decoration: none;
+    font-family: "Permanent Marker", cursive;
+    display: inline;
+  }
+
+  .page-header .language-button:hover {
+    background-color: var(--color-secondary-dark);
+    transition: 0.5s;
+  }
+
+  .page-header img {
+    width: 95vw;
+    max-width: 950px;
+    align-self: center;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    max-width: 1400px;
+  }
+
+  .landing-item {
+    width: 45vw;
+    max-width: 680px;
+  }
+
+  .landing-item header img {
+    width: 40vw;
+  }
+
+  .dev-footer p {
+    font: 500 2rem Archivo;
+  }
+
+  .dev-footer p img {
+    height: 4vh;
+  }
+}
+
+@media (min-width: 1400px) {
+    body {
+    /* marcacao temporaria */
+    background: purple;
+  }
+  
+  .page-header button{
+    padding: 0.8rem;
+    width: 300px;
+    height: 40px;
+    display: flex;
+  }
+
+  .page-header button img {
+    height: 32px;
+    width: auto;
+  }
+
+  .page-header button span {
+    font-size: 2rem;
+    align-self: center;
+  }
+
+  .page-header img {
+    width: 95vw;
+    max-width: 1200px;
+  }
+
+  .main-container {
+    display: flex;
+    flex-flow: row;
+    max-width: 2400px;
+  }
+
+  .landing-item {
+    width: 30vw;
+  }
+
+  .landing-item header img {
+    width: 25vw;
+  }
+  .portfolio button {
+    height: 7rem;
+    width: 30vw;
+  }
+
+  .portfolio .portfolio-button a {
+    font: 500 2rem Archivo;
+  }
+
+  .dev-footer p {
+    font: 500 2.4rem Archivo;
+  }
+
+  .dev-footer p img {
+    width: auto;
+    height: 5vh;
+  }
+}
