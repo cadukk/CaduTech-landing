@@ -1,34 +1,32 @@
 :root {
-  /* variaveis css*/
+/* variaveis css*/
 
-/* Cores bases */
+/* Background */
   --color-background:  #F1FAEE;
+  --color-header-background:  #457B9D;
+  --color-footer-background: #457B9D; 
+
+  /* Textos */
   --color-text-base: #457B9D;
   --color-text-secondary: #F1FAEE;
   --color-text-title: #1D3557;
   --color-text-hover: purple;
   
-/* Background */
-  --color-header-background: #457B9D;
-  /* #B6CCFE;  */
-  --color-footer-background: #457B9D; 
-  --color-button-background: #1D3557;
-  
-  /* Estilizacao do botao */
-  --color-button-border: #d4c2ff;
-  --color-button-text: #F1FAEE;
-  --color-button-hover: black;
-  --color-button-shadow: #A8DADC;
-  
   /* Estilizacao box itens  */
   --color-box-base: #ffffff;
   --color-box-border: whitesmoke;
-  --color-box-hover: #A8DADC;
   --color-box-shadow: #A8DADC;
   
+  /* Estilizacao do botao */
+  --color-button-background: #1D3557;
+  --color-button-border: #d4c2ff;
+  --color-button-text: #F1FAEE;
+  --color-button-hover: #457B9D;
+  --color-button-shadow: #A8DADC;
+    
   /* tamanho da font padrão: 16px - 100% - 1rem */
-  font-size: 60%;
   /* controle das medidas rem */
+  font-size: 60%;
 }
 
 * {
@@ -44,18 +42,20 @@
 
 body {
   background: var(--color-background);
-  font: 500 1.6rem Poppins;
   color: var(--color-text-base);
+  font: 500 1.6rem Poppins;
 }
 
 .page-header {
   background: var(--color-header-background);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
   width: 100vw;
   height: auto;
   padding: 0.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .button-language {
@@ -65,16 +65,18 @@ body {
   /* border: solid 1px var(--color-button-border); */
   /* border-radius: 0.5rem; */
   /* padding: .6rem; */
-  border: none;
   background: transparent;
+  
   margin-top: .5rem;
   margin-right: .5rem;
+  border: none;
+  
   align-self: flex-end;
 }
 
 .button-language img {
-  height: 16px;
   width: auto;
+  height: 16px;
 }
 
 .button-language span {
@@ -83,30 +85,34 @@ body {
 
 .button-language:hover {
   /* background-color: var(--color-button-hover); */
-  /* transition: 0.4s; */
+  transition: 0.4s ease;
   transform: scale(0.8);
 }
 
 .page-header a img {
   width: 95vw;
   max-width: 690px;
+  margin-bottom: 0.5rem;
+  
   align-self: center;
 }
 
 .main-container {
+  margin-top: 2rem;
+
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
  }
 
 .landing-item {
   background-color: var(--color-box-base);
   border: 1px solid var(--color-box-border);
   border-radius: 0.5rem;
-  width: 85vw;
-  max-width: 680px;
-  margin: 2.4rem auto;
   box-shadow: 0 0 30px var(--color-box-shadow);
+  
+  width: 85vw;
+  max-width: 450px;
+  margin: 2.4rem auto;
 }
 
 .landing-item header {
@@ -115,78 +121,72 @@ body {
 }
 
 .landing-item header h2 {
-  padding-bottom: 3rem;
-  font-family: "Permanent Marker", cursive;
   color: var(--color-text-title);
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+  padding-bottom: 3rem;
 }
 
 .landing-item header img {
   width: 70vw;
-  max-width: 550px;
+  max-width: 400px;
   height: auto;
+  align-self: center;
 }
 
 .landing-item p {
-  padding: 0 2rem;
-  font: 500 1.6rem Archivo;
-  text-align: center;
   color: var(--color-text-base);
-  font-size: 2rem;
+  font: 500 2rem Archivo;
   line-height: 2.8rem;
+  text-align: center;
   margin-bottom: 2rem;
+  padding: 0 2rem;
 }
 
 .landing-item:hover {
-  transition: all 0.4s;
-  background-color: var(--color-box-hover);
+  transition: all 0.4s ease-in-out;
   transform: scale(0.9);
 }
 
-.landing-item:hover h2, 
-.landing-item:hover p {
-color: var(--color-text-hover);
-}
-
 .portfolio {
+  margin: 2rem 0;
   display: flex;
   justify-content: center;
 }
 
-.portfolio button {
-  background-color: var(--color-button-background);
+.portfolio-box {
+  background-color: var(--color-box-base);
+  width: 85vw;
+  max-width: 450px;
   height: 5rem;
-  width: 70vw;
+  padding: 0.5rem;
 
-  border: solid 2px var(--color-button-border);
-  border-radius: 0.8rem;
-  box-shadow: 0 0 30px var(--color-button-shadow);
-  
-  padding: 1rem;
-  max-width: 350px;
+  border: solid 1px var(--color-box-border);
+  /* (--color-button-border); */
+  border-radius: 0.5rem;
+  box-shadow: 0 0 30px var(--color-box-shadow);
+  /* (--color-button-shadow); */
+}
+
+.portfolio-box a {
+  color: var(--color-text-base);
+  /* (--color-button-text); */
+  font: 900 2rem Archivo;
   text-decoration: none;
 }
 
-.portfolio-button a {
-  color: var(--color-button-text);
-  font: 500 1.4rem Archivo;
-  text-decoration: none;
-}
-
-.portfolio-button:hover,
-.portfolio-button:hover a {
-  background-color: var(--color-button-hover);
-  color: var(--color-text-hover);
-  transition: 0.4s;
-  transform: scale(0.9);
-  
+.portfolio-box:hover,
+.portfolio-box:hover a {
+  transition: 0.5s ease;
+  transform: scale(0.9); 
 }
 
 .dev-footer {
   background: var(--color-footer-background);
-  margin-top: 3rem;
   width: 100vw;
-  /* max-width: 500px; */
   height: 15vh;
+  margin-top: 3rem;
+  
   display: flex;
   justify-content: center;
 }
@@ -194,6 +194,7 @@ color: var(--color-text-hover);
 .dev-footer p {
   color: var(--color-text-secondary);
   font: 500 1.6rem Archivo;
+  padding; 2rem;
 
   display: flex;
   flex-wrap: wrap;
@@ -203,7 +204,7 @@ color: var(--color-text-hover);
 
 .dev-footer p img {
   width: auto;
-  height: 3vh;
+  height: 4vh;
 }
 
 @media (max-width: 1100px) and (min-width: 700px) {
