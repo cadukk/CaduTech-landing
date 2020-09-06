@@ -194,7 +194,7 @@ body {
 .dev-footer p {
   color: var(--color-text-secondary);
   font: 500 1.6rem Archivo;
-  padding; 2rem;
+  padding: 2rem;
 
   display: flex;
   flex-wrap: wrap;
