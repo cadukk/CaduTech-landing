@@ -51,7 +51,7 @@ body {
   background: var(--color-header-background);
   
   width: 100vw;
-  height: auto;
+  height: 18vh;
   padding: 0.2rem;
 
   display: flex;
@@ -67,10 +67,7 @@ body {
 
 .main-container {
   margin-top: 2rem;
-
-  display: flex;
-  flex-direction: column;
- }
+}
 
 .landing-item {
   background-color: var(--color-box-base);
@@ -149,8 +146,8 @@ body {
 .dev-footer {
   background: var(--color-footer-background);
   width: 100vw;
-  height: 15vh;
-  margin-top: 3rem;
+  height: 18vh;
+  margin-top: 2rem;
   
   display: flex;
   flex-flow: column;
@@ -205,6 +202,9 @@ body {
   transition: 0.4s ease;
   transform: scale(0.8);
 }
+.really-big {
+  visibility: hidden;
+  }
 
 @media (max-width: 1100px) and (min-width: 700px) {
   body {
@@ -276,41 +276,47 @@ body {
     /* background: purple; */
   }
 
+  .page-header{
+    height: 15vh;
+  }
   .page-header a img {
-    width: 95vw;
+    width: auto;
+    height: 10vh;
     max-width: 1024;
     align-items: center;
   }
 
   .main-container {
     display: flex;
-    flex-flow: row;
     max-width: 2400px; 
   }
 
   .landing-item {
-    width: 30vw;
+    margin-top: .5rem;
+    width: 25vw;
   }
 
   .landing-item header img {
-    width: 25vw;
+    width: 15vw;
   }
   .portfolio-box {
-    height: 7rem;
-    width: 30vw;
+    height: 5rem;
+    width: 25vw;
   }
 
   .portfolio .portfolio-box a {
-    font: 900 2rem Archivo;
+    font: 700 1.8rem Archivo;
   }
 
   .dev-footer{
-  position: absolute;
-  bottom: 0;
+    height: 12vh;
+    position: absolute;
+    bottom: 0;
   }
 
   .dev-footer p {
-    font: 500 2.6rem Archivo;
+    font: 500 2rem Archivo;
+    padding: 1rem; 
   }
 
   .dev-footer p img {
@@ -321,22 +327,23 @@ body {
   .dev-footer .button-language{
     width: auto;
     max-width: 650px;
-    height: 40px;
+    height: 4vh;
+    
   }
   
   .dev-footer .button-language img {
     width: auto;
-    height: 32px;
+    height: 24px;
     margin-right: 1rem;
   }
   
   .dev-footer .button-language span {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   
   .dev-footer .button-language:hover {
     transition: 0.4s ease;
     transform: scale(0.8);
   }
-
+  
 }
