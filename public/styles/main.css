@@ -38,6 +38,7 @@
 #page-landing {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -227,7 +228,6 @@ body {
 
   .landing-item {
     width: 45vw;
-    /* max-width: 380px; */
   }
 
   .landing-item header img {
@@ -237,6 +237,9 @@ body {
   .portfolio-box {
     width: 45vw;
   }
+  .dev-footer{
+    bottom: 0;
+  }
 
   .dev-footer p {
     font: 500 2rem Archivo;
@@ -245,55 +248,37 @@ body {
   .dev-footer p img {
     height: 4vh;
   }
-  .dev-footer button {
-    width: 25vw;
-    max-width: 200px;
-    height: 40px;
-    
-    display: flex;
-    justify-content: space-around;
-    align-items: right;
-    margin-top: .2rem;
-  }
-
-  .dev-footer button img {
-    height: 24px;
+  .dev-footer .button-language{
     width: auto;
-    align-self: center;
+    max-width: 450px;
+    height: 40px;
   }
-
-  .dev-footer button span {
-    color: var(--color-button-text);
-    text-decoration: none;
-    font-family: "Permanent Marker", cursive;
-    display: inline;
-    align-self: center;
+  
+  .dev-footer .button-language img {
+    width: auto;
+    height: 24px;
+    margin-right: 1rem;
   }
-
-  .dev-footer .language-button:hover {
-    background-color: var(--color-secondary-dark);
-    transition: 0.5s;
+  
+  .dev-footer .button-language span {
+    font-size: 1.5rem;
+  }
+  
+  .dev-footer .button-language:hover {
+    transition: 0.4s ease;
+    transform: scale(0.8);
   }
 }
 
 @media (min-width: 1100px) {
-    body {
+  body {
     /* marcacao temporaria */
     /* background: purple; */
   }
 
-  .page-header {
-    height: 20vh;
-  }
- 
   .page-header a img {
     width: 95vw;
     max-width: 1024;
-    align-items: center;
-  }
-
-  .content-box{
-    height: 60vh;
     align-items: center;
   }
 
@@ -320,42 +305,38 @@ body {
   }
 
   .dev-footer{
-  height: 18vh;
-  margin-top: 0;
+  position: absolute;
+  bottom: 0;
   }
 
   .dev-footer p {
-    font: 500 2.4rem Archivo;
+    font: 500 2.6rem Archivo;
   }
 
   .dev-footer p img {
     width: auto;
-    height: 5vh;
+    height: 4vh;
   }
   
-  .dev-footer button{
-    width: 25vw;
-    max-width: 200px;
+  .dev-footer .button-language{
+    width: auto;
+    max-width: 650px;
     height: 40px;
-    
-    display: flex;
-    justify-content: space-around;
   }
-
-  .dev-footer button img {
+  
+  .dev-footer .button-language img {
     width: auto;
     height: 32px;
-    align-self: center;
+    margin-right: 1rem;
   }
-
-  .dev-footer button span {
-    font-size: 1.5rem;
-    align-self: center;
-
-    color: var(--color-button-text);
-    text-decoration: none;
-    font-family: "Permanent Marker", cursive;
-    display: inline;
-    }
+  
+  .dev-footer .button-language span {
+    font-size: 2rem;
+  }
+  
+  .dev-footer .button-language:hover {
+    transition: 0.4s ease;
+    transform: scale(0.8);
+  }
 
 }
