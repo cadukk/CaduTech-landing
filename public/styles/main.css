@@ -54,47 +54,14 @@ body {
   padding: 0.2rem;
 
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.button-language {
-  /* background-color: var(--color-button-background); */
-  /* box-shadow: 0 0 15px var(--color-button-shadow); */
-
-  /* border: solid 1px var(--color-button-border); */
-  /* border-radius: 0.5rem; */
-  /* padding: .6rem; */
-  background: transparent;
-  
-  margin-top: .5rem;
-  margin-right: .5rem;
-  border: none;
-  
-  align-self: flex-end;
-}
-
-.button-language img {
-  width: auto;
-  height: 16px;
-}
-
-.button-language span {
-  display: none;
-}
-
-.button-language:hover {
-  /* background-color: var(--color-button-hover); */
-  transition: 0.4s ease;
-  transform: scale(0.8);
 }
 
 .page-header a img {
   width: 95vw;
   max-width: 690px;
-  margin-bottom: 0.5rem;
-  
-  align-self: center;
+  margin: 1rem 0.5rem;
 }
 
 .main-container {
@@ -158,20 +125,17 @@ body {
   background-color: var(--color-box-base);
   width: 85vw;
   max-width: 450px;
-  height: 5rem;
+  height: 7vh;
   padding: 0.5rem;
 
   border: solid 1px var(--color-box-border);
-  /* (--color-button-border); */
   border-radius: 0.5rem;
   box-shadow: 0 0 30px var(--color-box-shadow);
-  /* (--color-button-shadow); */
-}
+  }
 
 .portfolio-box a {
   color: var(--color-text-base);
-  /* (--color-button-text); */
-  font: 900 2rem Archivo;
+  font: 700 2rem Archivo;
   text-decoration: none;
 }
 
@@ -188,7 +152,9 @@ body {
   margin-top: 3rem;
   
   display: flex;
+  flex-flow: column;
   justify-content: center;
+  align-items: center;
 }
 
 .dev-footer p {
@@ -207,36 +173,42 @@ body {
   height: 4vh;
 }
 
+.dev-footer .button-language{
+  width: auto;
+  max-width: 250px;
+  height: 40px;
+  
+  background: transparent;
+  border: none;
+      
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.dev-footer .button-language img {
+  width: auto;
+  height: 16px;
+  margin-right: 1rem;
+}
+
+.dev-footer .button-language span {
+  font-size: 1rem;
+  
+  color: var(--color-button-text);
+  text-decoration: none;
+  font-family: "Permanent Marker", cursive;
+}
+
+.dev-footer .button-language:hover {
+  transition: 0.4s ease;
+  transform: scale(0.8);
+}
+
 @media (max-width: 1100px) and (min-width: 700px) {
   body {
     /* marcacao temporaria */
-    background: burlywood;
-  }
-
-  .page-header button {
-    padding: 0.8rem;
-    width: 230px;
-    height: 40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: right;
-  }
-
-  .page-header button img {
-    height: 24px;
-    width: auto;
-  }
-
-  .page-header button span {
-    color: var(--color-button-text);
-    text-decoration: none;
-    font-family: "Permanent Marker", cursive;
-    display: inline;
-  }
-
-  .page-header .language-button:hover {
-    background-color: var(--color-secondary-dark);
-    transition: 0.5s;
+    /* background: burlywood; */
   }
 
   .page-header img {
@@ -250,16 +222,20 @@ body {
     flex-direction: row;
 
     flex-wrap: wrap;
-    max-width: 700px;
+    max-width: 1099px;
   }
 
   .landing-item {
     width: 45vw;
-    max-width: 380px;
+    /* max-width: 380px; */
   }
 
   .landing-item header img {
     width: 40vw;
+  }
+
+  .portfolio-box {
+    width: 45vw;
   }
 
   .dev-footer p {
@@ -269,45 +245,62 @@ body {
   .dev-footer p img {
     height: 4vh;
   }
+  .dev-footer button {
+    width: 25vw;
+    max-width: 200px;
+    height: 40px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    margin-top: .2rem;
+  }
+
+  .dev-footer button img {
+    height: 24px;
+    width: auto;
+    align-self: center;
+  }
+
+  .dev-footer button span {
+    color: var(--color-button-text);
+    text-decoration: none;
+    font-family: "Permanent Marker", cursive;
+    display: inline;
+    align-self: center;
+  }
+
+  .dev-footer .language-button:hover {
+    background-color: var(--color-secondary-dark);
+    transition: 0.5s;
+  }
 }
 
 @media (min-width: 1100px) {
     body {
     /* marcacao temporaria */
-    background: purple;
-  }
-  
-  .page-header button{
-    padding: 0.8rem;
-    width: 300px;
-    height: 40px;
-    display: flex;
+    /* background: purple; */
   }
 
-  .page-header button img {
-    height: 32px;
-    width: auto;
+  .page-header {
+    height: 20vh;
   }
-
-  .page-header button span {
-    /* font-size: 2rem;
-    align-self: center; */
-
-    color: var(--color-button-text);
-    text-decoration: none;
-    font-family: "Permanent Marker", cursive;
-    display: inline;
-    }
-
-  .page-header img {
+ 
+  .page-header a img {
     width: 95vw;
-    max-width: 1200px;
+    max-width: 1024;
+    align-items: center;
+  }
+
+  .content-box{
+    height: 60vh;
+    align-items: center;
   }
 
   .main-container {
     display: flex;
     flex-flow: row;
-    max-width: 2400px;
+    max-width: 2400px; 
   }
 
   .landing-item {
@@ -317,13 +310,18 @@ body {
   .landing-item header img {
     width: 25vw;
   }
-  .portfolio button {
+  .portfolio-box {
     height: 7rem;
     width: 30vw;
   }
 
-  .portfolio .portfolio-button a {
-    font: 500 2rem Archivo;
+  .portfolio .portfolio-box a {
+    font: 900 2rem Archivo;
+  }
+
+  .dev-footer{
+  height: 18vh;
+  margin-top: 0;
   }
 
   .dev-footer p {
@@ -334,4 +332,30 @@ body {
     width: auto;
     height: 5vh;
   }
+  
+  .dev-footer button{
+    width: 25vw;
+    max-width: 200px;
+    height: 40px;
+    
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .dev-footer button img {
+    width: auto;
+    height: 32px;
+    align-self: center;
+  }
+
+  .dev-footer button span {
+    font-size: 1.5rem;
+    align-self: center;
+
+    color: var(--color-button-text);
+    text-decoration: none;
+    font-family: "Permanent Marker", cursive;
+    display: inline;
+    }
+
 }
